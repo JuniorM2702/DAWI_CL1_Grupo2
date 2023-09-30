@@ -12,14 +12,15 @@ public class FormPregunta2Controller {
 
     @GetMapping ("/calcularpres")
     public String index(Model model){
-        model.addAttribute("calcular", new Pregunta2Model());
-        model.addAttribute("verResultado", false);
-        return "formcalcular";
+        model.addAttribute("pregunta2model", new Pregunta2Model());
+        model.addAttribute("verresultado", false);
+        return "formpregunta2";
     }
+
     @PostMapping("/calcularpres")
-    public String calcularpres(@ModelAttribute ("calcular") Pregunta2Model pregunta2Model, Model model){
+    public String calcularpres(@ModelAttribute("pregunta2model") Pregunta2Model pregunta2Model, Model model) {
         Double montoPrestamo = pregunta2Model.getMonto();
-        Integer  numeroCuotas;
+        Integer numeroCuotas;
         Double montoCuota;
         Double interes;
 
@@ -41,9 +42,11 @@ public class FormPregunta2Controller {
         montoCuota = (montoPrestamo * (1 + interes)) / numeroCuotas;
 
         model.addAttribute("verresultado", true);
-        model.addAttribute("resultado","Su valor de prestamo: " +
-                String.format("%.2f", montoPrestamo) + ", usted se encuentra: " + numeroCuotas + ", usted entrà un interes de: " + interes);
-        return "formcalcular";
+
+        model.addAttribute("resultado","El nùmero de cuotas es :" + numeroCuotas + " El montò total es : " + montoCuota);
+
+       return "formpregunta2";
+
     }
 }
 

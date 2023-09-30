@@ -29,6 +29,7 @@ public class FormPregunta1Controller {
         model.addAttribute("verresultado", true);
         model.addAttribute("resultado", "El valor total a pagar es: $" + valorTotal);
 
+
         return "formpregunta1";
 
 
