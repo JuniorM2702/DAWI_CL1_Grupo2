@@ -31,6 +31,7 @@ public class FormPregunta1Controller {
         model.addAttribute("verresultado", true);
         model.addAttribute("resultado", "El valor a pagar es: " + valorAPagar);
 
+
         return "formpregunta1";
     }
 }
