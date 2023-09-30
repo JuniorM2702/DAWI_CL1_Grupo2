@@ -15,12 +15,12 @@
             <form th:action="@{/pregunta5}" method="post" th:object="${pregunta5model}">
                 <div class="form-floating mb-3">
                     <input type="number" class="form-control" id="txtcantidad" placeholder="Cantidad"
-                           th:field="{cantidad}">
+                           th:field="*{cantidad}">
                     <label for="txtcantidad">Cantidad</label>
                 </div>
                 <div class="form-floating mb-3">
                     <input type="number" class="form-control" id="txtprecio" placeholder="Precio"
-                           th:field="{precio}">
+                           th:field="*{precio}">
                     <label for="txtprecio">Precio</label>
                 </div>
                 <button type="submit" class="btn btn-primary">Total a pagar</button>
