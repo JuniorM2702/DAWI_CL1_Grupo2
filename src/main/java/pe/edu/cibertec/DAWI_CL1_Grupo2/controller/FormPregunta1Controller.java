@@ -19,7 +19,7 @@ public class FormPregunta1Controller {
 
     @PostMapping("/pregunta1")
     public String calculardescuento(
-            @ModelAttribute("pregunta1") Pregunta1Model pregunta1model, Model model){
+            @ModelAttribute("pregunta1model") Pregunta1Model pregunta1model, Model model){
         Double valorTotal = pregunta1model.getPrecio() * pregunta1model.getCantidad();
 
         if(valorTotal > 200){
