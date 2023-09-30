@@ -11,17 +11,8 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Pregunta1Model {
-
     private Double precio;
     private Integer cantidad;
-    private Double descuento;
 
 
-    public Double getPrecio() {
-        return precio;
-    }
-
-    public Integer getCantidad() {
-        return cantidad;
-    }
 }
