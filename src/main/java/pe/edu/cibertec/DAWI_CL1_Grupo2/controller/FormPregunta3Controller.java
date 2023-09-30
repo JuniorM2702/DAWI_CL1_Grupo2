@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-public class Pregunta3Controller {
+public class FormPregunta3Controller {
 
     @GetMapping("/convertirAVocal")
     public String mostrarFormulario() {
